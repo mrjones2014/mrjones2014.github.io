@@ -2,12 +2,18 @@ import {
   Alignment,
   AnchorButton,
   Divider,
+  H1,
+  Icon,
   Navbar,
+  NavbarDivider,
   NavbarGroup,
   NavbarHeading,
   Switch,
 } from "@blueprintjs/core";
+import { IconNames } from "@blueprintjs/icons";
+import { SocialLinkButtons } from "components/03-organisms/social-links/social-link-buttons";
 import React from "react";
+import Styles from "./main-nav.module.scss";
 
 export interface MainNavProps {
   useDarkTheme: boolean;
@@ -15,19 +21,14 @@ export interface MainNavProps {
 }
 
 export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
-  <Navbar fixedToTop={true}>
+  <Navbar fixedToTop={true} className={Styles.mainNav}>
     <NavbarGroup>
-      <NavbarHeading>Mat Jones</NavbarHeading>
-    </NavbarGroup>
-    <NavbarGroup>
-      <AnchorButton
-        minimal={true}
-        href="https://mjones44.medium.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Blog
-      </AnchorButton>
+      <NavbarHeading className={Styles.mainNav__brand}>
+        <Icon icon={IconNames.CONSOLE} />
+        mjones.network
+      </NavbarHeading>
+      <NavbarDivider />
+      <SocialLinkButtons minimal={true} showIcons={false} />
     </NavbarGroup>
     <NavbarGroup align={Alignment.RIGHT}>
       <Switch

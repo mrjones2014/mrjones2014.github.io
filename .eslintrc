@@ -1,0 +1,4 @@
+{
+  "plugins": ["@blueprintjs"],
+  "env": { "es6": true }
+}

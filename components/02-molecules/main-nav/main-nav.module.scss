@@ -1,0 +1,10 @@
+.mainNav {
+  &__brand {
+    font-weight: bold;
+    font-size: 18px;
+
+    > span {
+      padding-right: 8px;
+    }
+  }
+}
