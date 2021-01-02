@@ -4,6 +4,10 @@
 
 body {
   padding-top: $pt-navbar-height;
-  background-color: $pt-dark-app-background-color;
-  height: ;
+  height: vh(100);
+  margin: 0;
+
+  div#__next {
+    height: 100%;
+  }
 }
