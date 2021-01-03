@@ -6,19 +6,24 @@ import Styles from "./bio-card.module.scss";
 import FrontpageBlurb from "data/frontpage-blurb.md";
 import { SocialLinkButtons } from "components/03-organisms/social-links/social-link-buttons";
 
-export const BioCard: React.FC<ClassNameProps> = (props: ClassNameProps) => (
+export interface BioCardProps extends ClassNameProps {
+  body: React.ReactNode;
+  showSocialLinks?: boolean;
+}
+
+export const BioCard: React.FC<BioCardProps> = (props: BioCardProps) => (
   <Card
     elevation={Elevation.TWO}
-    className={`${Styles.bioCard} ${props.className ?? ""}`}
+    className={`${Styles.bioCard} ${props.className ?? ""} ${
+      Classes.RUNNING_TEXT
+    }`}
   >
-    <div className={Styles.bioCard__left}>
-      <Avatar />
-    </div>
-    <div className={`${Styles.bioCard__right} ${Classes.RUNNING_TEXT}`}>
-      {<FrontpageBlurb />}
-      <div className={Styles.bioCard__right__links}>
+    <Avatar className={Styles.bioCard__avatar} />
+    {props.body}
+    {props.showSocialLinks !== false && (
+      <div className={Styles.bioCard__links}>
         <SocialLinkButtons />
       </div>
-    </div>
+    )}
   </Card>
 );

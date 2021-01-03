@@ -12,7 +12,7 @@
     }
   }
 
-  &__socialLinks {
+  &__navLinks {
     display: inline-block;
 
     @include mq($from: zero, $until: tablet) {
@@ -20,7 +20,7 @@
     }
   }
 
-  &__socialMenu {
+  &__navMenu {
     @include mq($from: tablet) {
       display: none;
     }

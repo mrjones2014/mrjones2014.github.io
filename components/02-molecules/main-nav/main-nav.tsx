@@ -1,6 +1,7 @@
 import {
   Alignment,
   AnchorButton,
+  Icon,
   Navbar,
   NavbarDivider,
   NavbarGroup,
@@ -8,8 +9,9 @@ import {
   Switch,
 } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
-import { SocialLinkButtons } from "components/03-organisms/social-links/social-link-buttons";
-import { SocialLinkMenu } from "components/03-organisms/social-links/social-link-menu";
+import { NavLinkButtons } from "components/02-molecules/main-nav/nav-link-buttons";
+import { NavMenu } from "components/02-molecules/main-nav/nav-menu";
+import Link from "next/link";
 import React from "react";
 import Styles from "./main-nav.module.scss";
 
@@ -22,16 +24,18 @@ export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
   <Navbar fixedToTop={true} className={Styles.mainNav}>
     <NavbarGroup>
       <NavbarHeading className={Styles.mainNav__brand}>
-        <AnchorButton href="/" minimal={true} icon={IconNames.CONSOLE}>
-          mjones.network
-        </AnchorButton>
+        <Link href="/" passHref={true}>
+          <AnchorButton minimal={true} icon={IconNames.CONSOLE}>
+            mjones.network
+          </AnchorButton>
+        </Link>
       </NavbarHeading>
       <NavbarDivider />
-      <div className={Styles.mainNav__socialLinks}>
-        <SocialLinkButtons minimal={true} showIcons={false} />
+      <div className={Styles.mainNav__navLinks}>
+        <NavLinkButtons />
       </div>
-      <div className={Styles.mainNav__socialMenu}>
-        <SocialLinkMenu />
+      <div className={Styles.mainNav__navMenu}>
+        <NavMenu />
       </div>
     </NavbarGroup>
     <NavbarGroup align={Alignment.RIGHT}>

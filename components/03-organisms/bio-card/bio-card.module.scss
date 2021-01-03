@@ -2,42 +2,35 @@
 @import "~sass-mq";
 
 .bioCard {
-  display: flex;
+  min-height: 300px;
 
   @include mq($from: zero, $until: tablet) {
-    flex-direction: column;
-
-    &__right {
-      h1 {
-        font-size: 28px;
-        margin-top: 8px;
-      }
-    }
-  }
-
-  &__left {
-    margin-right: 48px;
-  }
-
-  &__right {
-    display: flex;
-    flex-direction: column;
-
     h1 {
-      margin-top: 0;
+      font-size: 28px;
+      margin-top: 8px;
     }
+  }
 
-    p {
-      font-size: 24px;
-    }
+  h1 {
+    margin-top: 0;
+  }
 
-    &__links {
-      margin-top: auto;
+  p {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
 
-      a {
-        margin-right: 8px;
-        margin-bottom: 8px;
-      }
+  &__avatar {
+    float: left;
+    margin-right: 32px;
+  }
+
+  &__links {
+    margin-top: auto;
+
+    a {
+      margin-right: 8px;
+      margin-bottom: 8px;
     }
   }
 }
