@@ -12,6 +12,7 @@ import {
 } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 import { SocialLinkButtons } from "components/03-organisms/social-links/social-link-buttons";
+import { SocialLinkMenu } from "components/03-organisms/social-links/social-link-menu";
 import React from "react";
 import Styles from "./main-nav.module.scss";
 
@@ -28,10 +29,16 @@ export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
         mjones.network
       </NavbarHeading>
       <NavbarDivider />
-      <SocialLinkButtons minimal={true} showIcons={false} />
+      <div className={Styles.mainNav__socialLinks}>
+        <SocialLinkButtons minimal={true} showIcons={false} />
+      </div>
+      <div className={Styles.mainNav__socialMenu}>
+        <SocialLinkMenu />
+      </div>
     </NavbarGroup>
     <NavbarGroup align={Alignment.RIGHT}>
       <Switch
+        className={Styles.mainNav__themeSwitcher}
         alignIndicator={Alignment.RIGHT}
         label="Theme"
         innerLabel="Light"

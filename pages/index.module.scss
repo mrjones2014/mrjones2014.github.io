@@ -1,3 +1,6 @@
+@import "sass/breakpoints";
+@import "~sass-mq";
+
 .indexPage {
   padding: 16px;
 
@@ -8,6 +11,10 @@
 
     &__bioCard {
       margin: 48px auto;
+
+      @include mq($from: zero, $until: tablet) {
+        margin: 8px auto;
+      }
     }
   }
 }

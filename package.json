@@ -14,7 +14,8 @@
     "next": "10.0.4",
     "normalize.css": "8.0.1",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "sass-mq": "5.0.1"
   },
   "devDependencies": {
     "@blueprintjs/eslint-plugin": "0.3.1",

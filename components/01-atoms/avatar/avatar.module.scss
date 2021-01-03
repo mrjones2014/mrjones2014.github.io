@@ -1,7 +1,15 @@
+@import "sass/breakpoints";
+@import "~sass-mq";
+
 .avatar {
   display: inline-block;
   width: 256px;
   height: 256px;
   border-radius: 100%;
   overflow: hidden;
+
+  @include mq($from: zero, $until: tablet) {
+    width: 100px;
+    height: 100px;
+  }
 }
