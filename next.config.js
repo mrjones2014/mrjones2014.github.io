@@ -12,4 +12,5 @@ module.exports = withMDX({
   assetPrefix: isProd
     ? "https://cdn.statically.io/gh/mrjones2014/mrjones2014.github.io/gh-pages/"
     : "",
+  distDir: "dist",
 });
