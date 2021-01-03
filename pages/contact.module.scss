@@ -1,0 +1,12 @@
+@import "sass/variables";
+@import "sass/mixins";
+
+.contactPage {
+  padding: 32px;
+  @include gutter-padding();
+
+  h1,
+  > h4 {
+    text-align: center;
+  }
+}

@@ -1,3 +1,4 @@
+@import "sass/variables";
 @import "sass/breakpoints";
 @import "~sass-mq";
 
@@ -25,10 +26,8 @@
     }
 
     &__content {
+      @include gutter-padding();
       position: relative;
-      $content-width: 1200px;
-      padding-left: calc((100vw - #{$content-width}) / 2);
-      padding-right: calc((100vw - #{$content-width}) / 2);
 
       &__bioCard {
         margin: 120px auto;
@@ -39,4 +38,9 @@
       }
     }
   }
+}
+
+@mixin gutter-padding() {
+  padding-left: calc((100vw - #{$content-width}) / 2);
+  padding-right: calc((100vw - #{$content-width}) / 2);
 }

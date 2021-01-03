@@ -41,11 +41,6 @@ export const SocialLinks: Array<SocialLink> = [
     icon: wrapIcon(Telegram),
   },
   {
-    href: "mailto:mat@mjones.network",
-    text: "Email",
-    icon: IconNames.ENVELOPE,
-  },
-  {
     external: true,
     href: "https://www.linkedin.com/in/mjones44/",
     text: "LinkedIn",

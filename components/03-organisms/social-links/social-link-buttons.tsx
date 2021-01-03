@@ -5,10 +5,11 @@ import React from "react";
 export interface SocialLinkButtonsProps {
   minimal?: boolean;
   showIcons?: boolean;
+  largeButtons?: boolean;
 }
 
 export const SocialLinkButtons: React.FC<SocialLinkButtonsProps> = (
-  props: SocialLinkButtonsProps
+  props: SocialLinkButtonsProps,
 ) => (
   <React.Fragment>
     {SocialLinks.map((link: SocialLink) => (
@@ -19,6 +20,7 @@ export const SocialLinkButtons: React.FC<SocialLinkButtonsProps> = (
         href={link.href}
         icon={props.showIcons !== false ? link.icon : undefined}
         key={link.href}
+        large={props.largeButtons}
       >
         {link.text}
       </AnchorButton>
