@@ -4,6 +4,11 @@
 @import "~normalize.css/normalize.css";
 @import "sass/functions";
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  font-family: "Roboto", $pt-font-family;
+}
+
 body {
   padding-top: $pt-navbar-height;
   height: vh(100);

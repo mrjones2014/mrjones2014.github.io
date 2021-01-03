@@ -28,6 +28,8 @@ export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
     <React.Fragment>
       <Head>
         <title>mjones.network</title>
+        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <div className={classNames.join(" ")}>
         <MainNav useDarkTheme={useDarkTheme} onThemeToggled={toggleDarkTheme} />

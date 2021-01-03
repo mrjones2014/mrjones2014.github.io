@@ -10,6 +10,7 @@ const menuItems = SocialLinks.map((link: SocialLink) => (
     target={link.external === true ? "_blank" : undefined}
     rel={link.external === true ? "noopener noreferrer" : undefined}
     text={link.text}
+    key={link.href}
   />
 ));
 

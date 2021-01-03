@@ -1,9 +1,6 @@
 import {
   Alignment,
   AnchorButton,
-  Divider,
-  H1,
-  Icon,
   Navbar,
   NavbarDivider,
   NavbarGroup,
@@ -25,8 +22,9 @@ export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
   <Navbar fixedToTop={true} className={Styles.mainNav}>
     <NavbarGroup>
       <NavbarHeading className={Styles.mainNav__brand}>
-        <Icon icon={IconNames.CONSOLE} />
-        mjones.network
+        <AnchorButton href="/" minimal={true} icon={IconNames.CONSOLE}>
+          mjones.network
+        </AnchorButton>
       </NavbarHeading>
       <NavbarDivider />
       <div className={Styles.mainNav__socialLinks}>
