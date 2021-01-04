@@ -50,5 +50,14 @@
         font-size: 1.25em;
       }
     }
+
+    &__socialLinks {
+      display: flex;
+      justify-content: space-evenly;
+
+      @include mq($from: tablet) {
+        margin-top: 48px;
+      }
+    }
   }
 }
