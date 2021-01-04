@@ -1,12 +1,21 @@
 @import "sass/mixins";
 @import "sass/breakpoints";
 @import "~sass-mq";
+@import "~@blueprintjs/core/lib/scss/variables";
 
 .aboutPage {
   padding: 128px;
   @include gutter-padding();
+  height: 100%;
+  position: relative;
+
+  @include code-background();
 
   @include mq($from: zero, $until: tablet) {
     padding: 16px;
+  }
+
+  &__content {
+    position: relative;
   }
 }
