@@ -1,6 +1,7 @@
 export interface NavLink {
   href: string;
   text: string;
+  external?: boolean;
 }
 
 export const NavLinks: Array<NavLink> = [
@@ -11,5 +12,10 @@ export const NavLinks: Array<NavLink> = [
   {
     href: "/contact",
     text: "Contact Me",
+  },
+  {
+    href: "https://medium.com/@mjones44/",
+    text: "Blog",
+    external: true,
   },
 ];

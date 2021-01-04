@@ -3,7 +3,7 @@ import { IconNames } from "@blueprintjs/icons";
 import { SocialLink, SocialLinks } from "data/social-links";
 import React from "react";
 
-const menuItems = SocialLinks.map((link: SocialLink) => (
+export const SocialLinkMenuItems = SocialLinks.map((link: SocialLink) => (
   <MenuItem
     icon={link.icon}
     href={link.href}
@@ -14,7 +14,7 @@ const menuItems = SocialLinks.map((link: SocialLink) => (
   />
 ));
 
-const menu = <Menu aria-label="menu">{menuItems}</Menu>;
+const menu = <Menu aria-label="menu">{SocialLinkMenuItems}</Menu>;
 
 export const SocialLinkMenu: React.FC = () => (
   <Popover minimal={true} content={menu}>
