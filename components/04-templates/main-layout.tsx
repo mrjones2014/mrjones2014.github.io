@@ -32,7 +32,7 @@ export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
         <link rel="icon" href="/favicon.svg" />
         <meta property="og:title" content="mjones.network" data-rh="true"/>
         <meta property="og:description" content="I'm a full-stack software engineer, passionate about online privacy, accessibility, and dark themes. 😎" data-rh="true"/>
-        <meta property="og:image" content="/avatar.svg" data-rh="true"/>
+        <meta property="og:image" content="https://mjones.network/avatar.svg" data-rh="true"/>
       </Head>
       <div className={classNames.join(" ")}>
         <MainNav useDarkTheme={useDarkTheme} onThemeToggled={toggleDarkTheme} />
