@@ -1,7 +1,14 @@
+@import "sass/breakpoints";
+@import "~sass-mq";
+
 .contactForm {
   textarea {
     resize: vertical;
     min-height: 300px;
     width: 100%;
+
+    @include mq($from: zero, $until: tablet) {
+      min-height: 150px;
+    }
   }
 }

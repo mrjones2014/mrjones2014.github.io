@@ -6,8 +6,9 @@
 
   @include mq($from: zero, $until: tablet) {
     h1 {
-      font-size: 28px;
+      font-size: 2em;
       margin-top: 8px;
+      margin-bottom: 32px;
     }
   }
 
@@ -23,6 +24,10 @@
   &__avatar {
     float: left;
     margin-right: 32px;
+
+    @include mq($from: zero, $until: tablet) {
+      margin-right: 16px;
+    }
   }
 
   &__links {

@@ -1,9 +1,19 @@
 @import "sass/variables";
 @import "sass/mixins";
+@import "sass/breakpoints";
+@import "~sass-mq";
 
 .contactPage {
   padding: 32px;
   @include gutter-padding();
+
+  @include mq($from: zero, $until: tablet) {
+    padding: 16px;
+
+    &__aroundTheWeb {
+      margin-bottom: 32px;
+    }
+  }
 
   h1,
   > h4 {

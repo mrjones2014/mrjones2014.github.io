@@ -15,7 +15,9 @@ const ContactPage: React.FC = () => (
   <div className={Styles.contactPage}>
     <H1>Contact Me</H1>
     <H4>Want to hire me or inquire about some work? Contact me here.</H4>
-    <H4>Or, find me {menuTrigger}.</H4>
+    <H4 className={Styles.contactPage__aroundTheWeb}>
+      Or, find me {menuTrigger}.
+    </H4>
     <ContactForm />
   </div>
 );
