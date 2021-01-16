@@ -4,19 +4,37 @@
 @import "~sass-mq";
 
 .contactPage {
-  padding: 32px;
-  @include gutter-padding();
+  @include code-background();
+  position: relative;
+  height: 100%;
 
-  @include mq($from: zero, $until: tablet) {
-    padding: 16px;
+  &__content {
+    @include gutter-padding();
+    position: relative;
+    padding-top: 32px;
+    height: 100%;
+    overflow-y: auto;
 
-    &__aroundTheWeb {
-      margin-bottom: 32px;
+    @include mq($from: zero, $until: tablet) {
+      padding-left: 16px;
+      padding-right: 16px;
     }
-  }
 
-  h1,
-  > h4 {
-    text-align: center;
+    &__card {
+      margin-bottom: 32px;
+
+      &__header {
+        h1,
+        h4 {
+          text-align: center;
+        }
+      }
+
+      &__aroundTheWeb {
+        @include mq($from: zero, $until: tablet) {
+          margin-bottom: 32px;
+        }
+      }
+    }
   }
 }
