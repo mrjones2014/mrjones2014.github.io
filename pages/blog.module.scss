@@ -1,0 +1,31 @@
+@import "sass/mixins";
+@import "sass/breakpoints";
+@import "~sass-mq";
+
+.blog {
+  @include gutter-padding();
+  @include code-background();
+  padding: 48px;
+  position: relative;
+
+  @include mq($from: zero, $until: tablet) {
+    padding: 16px;
+  }
+
+  $post-card-margin: 8px;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__post {
+      margin: $post-card-margin;
+      max-width: calc(50% - #{$post-card-margin * 2});
+
+      @include mq($from: zero, $until: tablet) {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "sass/breakpoints";
+@import "~sass-mq";
+
+.blogPost {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  color: inherit !important;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__card {
+    padding: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__info {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__title {
+        &__header {
+          @include mq($from: zero, $until: tablet) {
+            font-size: 18px !important;
+          }
+        }
+      }
+
+      &__meta {
+        &__tags {
+          margin-bottom: 8px;
+
+          &__tag {
+            margin-right: 8px;
+          }
+        }
+
+        &__divider {
+          margin-bottom: 8px;
+        }
+
+        &__tag {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

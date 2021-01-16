@@ -5,9 +5,10 @@ import {
   InputGroup,
   Intent,
   TextArea,
+  Toaster,
 } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Styles from "./contact-form.module.scss";
 
 const FORMSPREE_API_URL = "https://formspree.io/f/xgeppgjy";
@@ -15,6 +16,8 @@ const FORMSPREE_API_URL = "https://formspree.io/f/xgeppgjy";
 export const ContactForm: React.FC = () => {
   const [fullName, setFullName] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
+  const toaster = useRef<Toaster>(null);
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setFullName(e.target.value);
@@ -38,7 +41,10 @@ export const ContactForm: React.FC = () => {
         return;
       }
 
-      // TODO toast
+      toaster.current?.show({
+        intent: Intent.DANGER,
+        message: "Failed to submit contact form.",
+      });
     };
     xhr.send(data);
   };
@@ -101,6 +107,7 @@ export const ContactForm: React.FC = () => {
       <FormGroup>
         <Button type="submit">Submit</Button>
       </FormGroup>
+      <Toaster ref={toaster} />
     </form>
   );
 };

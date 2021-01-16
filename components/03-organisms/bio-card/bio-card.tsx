@@ -4,6 +4,7 @@ import { ClassNameProps } from "interfaces/class-name-props";
 import React from "react";
 import Styles from "./bio-card.module.scss";
 import FullBio from "data/full-bio.md";
+import { SocialLinkButtons } from "components/03-organisms/social-links/social-link-buttons";
 
 export const BioCard: React.FC<ClassNameProps> = (props: ClassNameProps) => (
   <Card
@@ -13,5 +14,8 @@ export const BioCard: React.FC<ClassNameProps> = (props: ClassNameProps) => (
   >
     <Avatar className={Styles.bioCard__avatar} />
     <FullBio />
+    <div className={Styles.bioCard__links}>
+      <SocialLinkButtons />
+    </div>
   </Card>
 );

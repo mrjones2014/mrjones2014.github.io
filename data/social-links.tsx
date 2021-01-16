@@ -4,8 +4,8 @@ import {
   Github,
   Icon,
   Linkedin,
-  Medium,
   Telegram,
+  DevDotTo,
 } from "@icons-pack/react-simple-icons";
 
 export interface SocialLink {
@@ -24,9 +24,9 @@ const wrapIcon = (IconComponent: Icon) => (
 export const SocialLinks: Array<SocialLink> = [
   {
     external: true,
-    href: "https://mjones44.medium.com/",
+    href: "https://dev.to/matjones/",
     text: "Blog",
-    icon: wrapIcon(Medium),
+    icon: wrapIcon(DevDotTo),
   },
   {
     external: true,
