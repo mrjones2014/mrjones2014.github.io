@@ -5,12 +5,8 @@
 .blog {
   @include gutter-padding();
   @include code-background();
-  padding: 48px;
   position: relative;
-
-  @include mq($from: zero, $until: tablet) {
-    padding: 16px;
-  }
+  height: 100%;
 
   $post-card-margin: 8px;
 
@@ -18,6 +14,13 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
+    overflow-y: auto;
+    padding: 48px;
+
+    @include mq($from: zero, $until: tablet) {
+      padding: 16px;
+    }
 
     &__post {
       margin: $post-card-margin;

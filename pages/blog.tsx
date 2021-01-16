@@ -18,16 +18,17 @@ const BlogPage: React.FC = () => {
     ),
   );
 
-  if (loading) {
-    return <Spinner />;
-  }
-
   return (
     <div className={Styles.blog}>
       <div className={Styles.blog__content}>
-        {articles.map((article: DevToArticle) => (
-          <BlogPost article={article} className={Styles.blog__content__post} />
-        ))}
+        {loading && <Spinner />}
+        {!loading &&
+          articles.map((article: DevToArticle) => (
+            <BlogPost
+              article={article}
+              className={Styles.blog__content__post}
+            />
+          ))}
       </div>
       <Toaster ref={toaster} />
     </div>
