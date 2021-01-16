@@ -28,8 +28,11 @@ export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
     <React.Fragment>
       <Head>
         <title>mjones.network</title>
-        <link rel="shortcut icon" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="https://mjones.network/favicon.svg" />
+        <link rel="icon" href="https://mjones.network/favicon.svg" />
+        <meta property="og:title" content="mjones.network" data-rh="true"/>
+        <meta property="og:description" content="I'm a full-stack software engineer, passionate about online privacy, accessibility, and dark themes. 😎" data-rh="true"/>
+        <meta property="og:image" content="https://mjones.network/avatar.png" data-rh="true"/>
       </Head>
       <div className={classNames.join(" ")}>
         <MainNav useDarkTheme={useDarkTheme} onThemeToggled={toggleDarkTheme} />
