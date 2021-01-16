@@ -23,8 +23,7 @@ const wrapIcon = (IconComponent: Icon) => (
 
 export const SocialLinks: Array<SocialLink> = [
   {
-    external: true,
-    href: "https://dev.to/matjones/",
+    href: "/blog",
     text: "Blog",
     icon: wrapIcon(DevDotTo),
   },
