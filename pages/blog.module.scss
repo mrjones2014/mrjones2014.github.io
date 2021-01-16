@@ -3,7 +3,6 @@
 @import "~sass-mq";
 
 .blog {
-  @include gutter-padding();
   @include code-background();
   position: relative;
   height: 100%;
@@ -11,16 +10,14 @@
   $post-card-margin: 8px;
 
   &__content {
+    @include gutter-padding();
     position: relative;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
     overflow-y: auto;
-    padding: 48px;
-
-    @include mq($from: zero, $until: tablet) {
-      padding: 16px;
-    }
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     &__post {
       margin: $post-card-margin;

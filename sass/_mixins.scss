@@ -1,8 +1,15 @@
 @import "sass/variables";
+@import "sass/breakpoints";
+@import "~sass-mq";
 
 @mixin gutter-padding($inner-width: $content-width) {
   padding-left: calc((100vw - #{$inner-width}) / 2);
   padding-right: calc((100vw - #{$inner-width}) / 2);
+
+  @include mq($from: zero, $until: tablet) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 @mixin code-background() {
