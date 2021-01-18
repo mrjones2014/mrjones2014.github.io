@@ -1,7 +1,6 @@
 import DevToArticle from "interfaces/dev-to-article";
 import DevToArticleMeta from "interfaces/dev-to-article-meta";
 import superagent from "superagent";
-import SuperagentNoCache from "utils/no-cache-plugin";
 
 const DEV_TO_USERNAME = "matjones";
 const ARTICLES_API = `https://dev.to/api/articles`;
@@ -14,16 +13,13 @@ const fetchArticles = async (
   limit?: number,
 ): Promise<Array<DevToArticleMeta>> => {
   const query = Object.assign({}, DEFAULT_QUERY, { per_page: limit });
-  const response = await superagent
-    .get(ARTICLES_API)
-    .use(SuperagentNoCache)
-    .query(query);
+  const response = await superagent.get(ARTICLES_API).query(query);
   return parseResponse<Array<DevToArticleMeta>>(response.body);
 };
 
 const getArticle = async (slug: string): Promise<DevToArticle> => {
   const endpoint = `${ARTICLES_API}/${DEV_TO_USERNAME}/${slug}`;
-  const response = await superagent.get(endpoint).use(SuperagentNoCache);
+  const response = await superagent.get(endpoint);
   return parseResponse<DevToArticle>(response.body);
 };
 
