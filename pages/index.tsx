@@ -11,7 +11,9 @@ const IndexPage: React.FC = () => (
       </div>
       <FrontpageBlurb />
       <div className={Styles.indexPage__content__socialLinks}>
-        <SocialLinkButtons />
+        <SocialLinkButtons
+          className={Styles.indexPage__content__socialLinks__link}
+        />
       </div>
     </div>
   </div>

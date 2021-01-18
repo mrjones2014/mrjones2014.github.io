@@ -21,35 +21,33 @@ export interface MainNavProps {
   onThemeToggled: () => void;
 }
 
-export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => {
-  const { width } = useWindowSize();
-
-  return (
-    <Navbar fixedToTop={true} className={Styles.mainNav}>
-      <NavbarGroup className={Styles.mainNav__left}>
-        <NavbarHeading className={Styles.mainNav__left__brand}>
-          <Link href="/" passHref={true}>
-            <AnchorButton minimal={true} icon={IconNames.HOME}>
-              {width >= BreakPoints.tablet && "mjones.network"}
-            </AnchorButton>
-          </Link>
-        </NavbarHeading>
-        <NavbarDivider />
-        <div className={Styles.mainNav__left__navLinks}>
-          <NavLinkButtons />
-        </div>
-      </NavbarGroup>
-      <NavbarGroup align={Alignment.RIGHT}>
-        <Switch
-          className={Styles.mainNav__themeSwitcher}
-          alignIndicator={Alignment.RIGHT}
-          label="Theme"
-          innerLabel="Light"
-          innerLabelChecked="Dark"
-          checked={props.useDarkTheme}
-          onChange={props.onThemeToggled}
-        />
-      </NavbarGroup>
-    </Navbar>
-  );
-};
+export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
+  <Navbar fixedToTop={true} className={Styles.mainNav}>
+    <NavbarGroup className={Styles.mainNav__left}>
+      <NavbarHeading className={Styles.mainNav__left__brand}>
+        <Link href="/" passHref={true}>
+          <AnchorButton minimal={true} icon={IconNames.HOME}>
+            <span className={Styles.mainNav__left__brand__text}>
+              mjones.network
+            </span>
+          </AnchorButton>
+        </Link>
+      </NavbarHeading>
+      <NavbarDivider />
+      <div className={Styles.mainNav__left__navLinks}>
+        <NavLinkButtons />
+      </div>
+    </NavbarGroup>
+    <NavbarGroup align={Alignment.RIGHT}>
+      <Switch
+        className={Styles.mainNav__themeSwitcher}
+        alignIndicator={Alignment.RIGHT}
+        label="Theme"
+        innerLabel="Light"
+        innerLabelChecked="Dark"
+        checked={props.useDarkTheme}
+        onChange={props.onThemeToggled}
+      />
+    </NavbarGroup>
+  </Navbar>
+);

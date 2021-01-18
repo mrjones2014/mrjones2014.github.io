@@ -5,6 +5,7 @@ import React from "react";
 import { BreakPoints } from "utils/breakpoints";
 
 export interface SocialLinkButtonsProps {
+  className?: string;
   minimal?: boolean;
   showIcons?: boolean;
   largeButtons?: boolean;
@@ -20,6 +21,7 @@ export const SocialLinkButtons: React.FC<SocialLinkButtonsProps> = (
     <React.Fragment>
       {SocialLinks.map((link: SocialLink) => (
         <AnchorButton
+          className={props.className}
           minimal={props.minimal}
           target={link.external === true ? "_blank" : undefined}
           rel={link.external === true ? "noopener noreferrer" : undefined}

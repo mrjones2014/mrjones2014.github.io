@@ -39,9 +39,14 @@
     &__socialLinks {
       display: flex;
       justify-content: space-evenly;
+      flex-wrap: wrap;
 
       @include mq($from: tablet) {
         margin-top: 48px;
+      }
+
+      &__link {
+        margin-bottom: 16px;
       }
     }
   }
