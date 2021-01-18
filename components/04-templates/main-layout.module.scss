@@ -1,8 +1,9 @@
 @import "~@blueprintjs/core/lib/scss/variables";
+@import "sass/functions";
 
 .mainLayout {
-  height: 100%;
-  overflow-y: auto;
+  height: vh(100);
+  padding-top: $pt-navbar-height;
 
   &.dark {
     background-color: $pt-dark-app-background-color;
