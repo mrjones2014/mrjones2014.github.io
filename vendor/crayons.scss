@@ -1,0 +1,235 @@
+@import "sass/variables";
+
+$syntax-background-color: #08090a;
+$syntax-text-color: #f8f8f2;
+$syntax-comment-color: #808080;
+$syntax-declaration-color: #f39c12;
+$syntax-literal-color: #dda0dd;
+$syntax-error-color: #f9690e;
+$syntax-name-color: #7ed07e;
+$syntax-string-color: #f2ca27;
+
+pre {
+  border-radius: $border-radius;
+  overflow-x: auto;
+}
+
+code {
+  border-radius: $border-radius;
+  max-width: 100%;
+  font-size: 16px;
+  padding: 0.1em 0.25em;
+  font-family: "monospace";
+}
+.highlight .hll {
+  background-color: #49483e;
+}
+.highlight {
+  border-radius: $border-radius;
+  background: $syntax-background-color;
+  color: $syntax-text-color;
+}
+.highlight .c {
+  color: $syntax-comment-color;
+}
+.highlight .err {
+  text-shadow: 0 0 7px $syntax-error-color;
+}
+.highlight .k {
+  color: $syntax-declaration-color;
+}
+.highlight .l {
+  color: $syntax-literal-color;
+}
+.highlight .n {
+  color: $syntax-text-color;
+}
+.highlight .o {
+  color: $syntax-error-color;
+}
+.highlight .p {
+  color: $syntax-text-color;
+}
+.highlight .ch {
+  color: $syntax-comment-color;
+}
+.highlight .cm {
+  color: $syntax-comment-color;
+}
+.highlight .cp {
+  color: $syntax-comment-color;
+}
+.highlight .cpf {
+  color: $syntax-comment-color;
+}
+.highlight .c1 {
+  color: $syntax-comment-color;
+}
+.highlight .cs {
+  color: $syntax-comment-color;
+}
+.highlight .gd {
+  color: $syntax-error-color;
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gi {
+  color: $syntax-name-color;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: $syntax-comment-color;
+}
+.highlight .kc {
+  color: $syntax-declaration-color;
+}
+.highlight .kd {
+  color: $syntax-declaration-color;
+}
+.highlight .kn {
+  color: $syntax-error-color;
+}
+.highlight .kp {
+  color: $syntax-declaration-color;
+}
+.highlight .kr {
+  color: $syntax-declaration-color;
+}
+.highlight .kt {
+  color: $syntax-declaration-color;
+}
+.highlight .ld {
+  color: $syntax-string-color;
+}
+.highlight .m {
+  color: $syntax-literal-color;
+}
+.highlight .s {
+  color: $syntax-string-color;
+}
+.highlight .na {
+  color: $syntax-name-color;
+}
+.highlight .nb {
+  color: $syntax-text-color;
+}
+.highlight .nc {
+  color: $syntax-name-color;
+}
+.highlight .no {
+  color: $syntax-declaration-color;
+}
+.highlight .nd {
+  color: $syntax-name-color;
+}
+.highlight .ni {
+  color: $syntax-text-color;
+}
+.highlight .ne {
+  color: $syntax-name-color;
+}
+.highlight .nf {
+  color: $syntax-name-color;
+}
+.highlight .nl {
+  color: $syntax-text-color;
+}
+.highlight .nn {
+  color: $syntax-text-color;
+}
+.highlight .nx {
+  color: $syntax-name-color;
+}
+.highlight .py {
+  color: $syntax-text-color;
+}
+.highlight .nt {
+  color: $syntax-error-color;
+}
+.highlight .nv {
+  color: $syntax-text-color;
+}
+.highlight .ow {
+  color: $syntax-error-color;
+}
+.highlight .w {
+  color: $syntax-text-color;
+}
+.highlight .mb {
+  color: $syntax-literal-color;
+}
+.highlight .mf {
+  color: $syntax-literal-color;
+}
+.highlight .mh {
+  color: $syntax-literal-color;
+}
+.highlight .mi {
+  color: $syntax-literal-color;
+}
+.highlight .mo {
+  color: $syntax-literal-color;
+}
+.highlight .sa {
+  color: $syntax-string-color;
+}
+.highlight .sb {
+  color: $syntax-string-color;
+}
+.highlight .sc {
+  color: $syntax-string-color;
+}
+.highlight .dl {
+  color: $syntax-string-color;
+}
+.highlight .sd {
+  color: $syntax-string-color;
+}
+.highlight .s2 {
+  color: $syntax-string-color;
+}
+.highlight .se {
+  color: $syntax-literal-color;
+}
+.highlight .sh {
+  color: $syntax-string-color;
+}
+.highlight .si {
+  color: $syntax-string-color;
+}
+.highlight .sx {
+  color: $syntax-string-color;
+}
+.highlight .sr {
+  color: $syntax-string-color;
+}
+.highlight .s1 {
+  color: $syntax-string-color;
+}
+.highlight .ss {
+  color: $syntax-string-color;
+}
+.highlight .bp {
+  color: $syntax-text-color;
+}
+.highlight .fm {
+  color: $syntax-name-color;
+}
+.highlight .vc {
+  color: $syntax-text-color;
+}
+.highlight .vg {
+  color: $syntax-text-color;
+}
+.highlight .vi {
+  color: $syntax-text-color;
+}
+.highlight .vm {
+  color: $syntax-text-color;
+}
+.highlight .il {
+  color: $syntax-literal-color;
+}

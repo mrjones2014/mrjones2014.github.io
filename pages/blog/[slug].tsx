@@ -1,4 +1,4 @@
-import { Card, H1, Spinner, Tag } from "@blueprintjs/core";
+import { Card, Classes, H1, Spinner, Tag } from "@blueprintjs/core";
 import { BlogPostMetaTags } from "components/03-organisms/blog-post/blog-post-meta-tags";
 import useDevToArticle from "hooks/service/use-dev-to-article";
 import { useRouter } from "next/router";
@@ -14,27 +14,48 @@ const BlogPostPage: React.FC = () => {
     // TODO redirect to 404
   }
 
+  if (loading) {
+    return (
+      <div className={Styles.blogPost}>
+        <div className={Styles.blogPost__content}>
+          <Spinner className={Styles.blogPost__content__spinner} />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={Styles.blogPost}>
       <div className={Styles.blogPost__content}>
-        {loading && <Spinner className={Styles.blogPost__content__spinner} />}
-        {!loading != null && (
-          <Card className={Styles.blogPost__content__card}>
-            <div className={Styles.blogPost__content__card__image}>
-              <img src={article.cover_image} alt={article.description} />
+        <Card className={Styles.blogPost__content__card}>
+          <div className={Styles.blogPost__content__card__image}>
+            <img src={article!.cover_image} alt={article!.description} />
+          </div>
+          <div className={Styles.blogPost__content__card__title}>
+            <H1>{article!.title}</H1>
+            <div className={Styles.blogPost__content__card__title__meta}>
+              <BlogPostMetaTags
+                article={article!}
+                className={Styles.blogPost__content__card__title__meta__tag}
+                enableLinks={true}
+              />
             </div>
-            <div className={Styles.blogPost__content__card__title}>
-              <H1>{article!.title}</H1>
-              <div className={Styles.blogPost__content__card__title__meta}>
-                <BlogPostMetaTags
-                  article={article!}
-                  className={Styles.blogPost__content__card__title__meta__tag}
-                  enableLinks={true}
-                />
-              </div>
-            </div>
-          </Card>
-        )}
+          </div>
+          <div className={Styles.blogPost__content__card__body}>
+            <div
+              className={Classes.RUNNING_TEXT}
+              dangerouslySetInnerHTML={{
+                __html: article.body_html,
+              }}
+            />
+            <hr />
+            <BlogPostMetaTags
+              article={article!}
+              className={Styles.blogPost__content__card__body__metatag}
+              enableLinks={true}
+            />
+          </div>
+        </Card>
       </div>
     </div>
   );

@@ -21,6 +21,10 @@
       @include mq($from: zero, $until: tablet) {
         padding-top: 16px;
       }
+
+      &__bioCard {
+        margin-bottom: 48px;
+      }
     }
   }
 }

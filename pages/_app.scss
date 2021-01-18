@@ -4,6 +4,8 @@
 @import "~normalize.css/normalize.css";
 @import "sass/functions";
 
+@import "vendor/crayons.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
   font-family: "Roboto", $pt-font-family;
@@ -16,5 +18,17 @@ body {
 
   div#__next {
     height: 100%;
+  }
+
+  .highlight.js-code-highlight {
+    .js-actions-panel {
+      display: none;
+    }
+
+    code {
+      font-size: 16px;
+      background: transparent;
+      box-shadow: none;
+    }
   }
 }
