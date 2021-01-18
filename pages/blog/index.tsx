@@ -22,13 +22,17 @@ const BlogPage: React.FC = () => {
     <div className={Styles.blog}>
       <div className={Styles.blog__content}>
         {loading && <Spinner className={Styles.blog__content__spinner} />}
-        {!loading &&
-          articles.map((article: DevToArticleMeta) => (
-            <BlogPostCard
-              article={article}
-              className={Styles.blog__content__post}
-            />
-          ))}
+        {!loading && (
+          <div className={Styles.blog__content__posts}>
+            {articles.map((article: DevToArticleMeta) => (
+              <BlogPostCard
+                article={article}
+                key={article.id}
+                className={Styles.blog__content__posts__post}
+              />
+            ))}
+          </div>
+        )}
       </div>
       <Toaster ref={toaster} />
     </div>

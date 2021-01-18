@@ -10,11 +10,11 @@ export const NavLinks: Array<NavLink> = [
     text: "About",
   },
   {
-    href: "/contact",
-    text: "Contact Me",
-  },
-  {
     href: "/blog",
     text: "Blog",
+  },
+  {
+    href: "/contact",
+    text: "Contact Me",
   },
 ];

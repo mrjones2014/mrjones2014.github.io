@@ -2,27 +2,29 @@
 @import "~sass-mq";
 
 .mainNav {
-  &__brand {
-    font-weight: bold;
-    font-size: 18px;
+  @include mq($from: zero, $until: tablet) {
+    display: flex;
+  }
+
+  &__left {
     white-space: nowrap;
 
-    > span {
-      padding-right: 8px;
+    &__brand {
+      font-weight: bold;
+      font-size: 18px;
+      white-space: nowrap;
+
+      @include mq($from: zero, $until: tablet) {
+        margin-right: 0;
+      }
+
+      > span {
+        padding-right: 8px;
+      }
     }
-  }
 
-  &__navLinks {
-    display: inline-block;
-
-    @include mq($from: zero, $until: tablet) {
-      display: none;
-    }
-  }
-
-  &__navMenu {
-    @include mq($from: tablet) {
-      display: none;
+    &__navLinks {
+      display: inline-block;
     }
   }
 
@@ -30,6 +32,7 @@
     padding-top: 8px;
 
     @include mq($from: zero, $until: tablet) {
+      padding-top: 28px;
       color: transparent !important;
     }
   }

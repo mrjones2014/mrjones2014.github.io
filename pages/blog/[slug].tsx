@@ -1,4 +1,4 @@
-import { Card, Classes, H1, Spinner, Tag } from "@blueprintjs/core";
+import { Card, Classes, Divider, H1, Spinner, Tag } from "@blueprintjs/core";
 import { BlogPostMetaTags } from "components/03-organisms/blog-post/blog-post-meta-tags";
 import useDevToArticle from "hooks/service/use-dev-to-article";
 import { useRouter } from "next/router";
@@ -48,7 +48,9 @@ const BlogPostPage: React.FC = () => {
                 __html: article.body_html,
               }}
             />
-            <hr />
+            <Divider
+              className={Styles.blogPost__content__card__body__separator}
+            />
             <BlogPostMetaTags
               article={article!}
               className={Styles.blogPost__content__card__body__metatag}
