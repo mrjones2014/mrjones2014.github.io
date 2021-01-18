@@ -1,0 +1,56 @@
+@import "sass/mixins";
+@import "sass/breakpoints";
+@import "~sass-mq";
+
+.blogPost {
+  @include code-background();
+  position: relative;
+  height: 100%;
+
+  &__content {
+    @include gutter-padding();
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &__spinner {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__card {
+      padding: 0;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      &__image {
+        overflow: hidden;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &__title,
+      &__body {
+        padding: $card-padding;
+      }
+
+      &__title {
+        &__meta {
+          &__tag {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+  }
+}

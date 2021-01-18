@@ -1,10 +1,10 @@
-import DevToArticle from "interfaces/dev-to-article";
+import DevToArticleMeta from "interfaces/dev-to-article-meta";
 import { useEffect, useState } from "react";
 import { DevToService } from "utils/dev-to-service";
 
 export default function useDevToArticles(onError?: () => void) {
   const [loading, setLoading] = useState(true);
-  const [articles, setArticles] = useState<Array<DevToArticle>>([]);
+  const [articles, setArticles] = useState<Array<DevToArticleMeta>>([]);
 
   useEffect(() => {
     (async () => {

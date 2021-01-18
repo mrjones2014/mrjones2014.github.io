@@ -19,6 +19,11 @@
     padding-top: 16px;
     padding-bottom: 16px;
 
+    &__spinner {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     &__post {
       margin: $post-card-margin;
       max-width: calc(50% - #{$post-card-margin * 2});
