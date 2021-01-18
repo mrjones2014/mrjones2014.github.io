@@ -15,15 +15,26 @@
       white-space: nowrap;
 
       @include mq($from: zero, $until: tablet) {
-        &__text {
-          display: none;
-        }
-
         margin-right: 0 !important;
       }
 
-      > span {
-        padding-right: 8px;
+      &__container {
+        &__img {
+          width: 32px;
+          height: auto;
+          vertical-align: middle;
+          margin-right: 8px;
+
+          @include mq($from: zero, $until: tablet) {
+            margin-right: 0;
+          }
+        }
+
+        &__text {
+          @include mq($from: zero, $until: tablet) {
+            display: none;
+          }
+        }
       }
     }
 

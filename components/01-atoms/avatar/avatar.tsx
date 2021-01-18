@@ -8,7 +8,7 @@ export interface AvatarProps extends ClassNameProps {
 
 export const Avatar: React.FC<AvatarProps> = (props: AvatarProps) => {
   if (props.svg === true) {
-    return <img src="/avatar.svg" />;
+    return <img src="/avatar.svg" className={props.className} />;
   }
 
   return (

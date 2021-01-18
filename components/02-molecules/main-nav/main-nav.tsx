@@ -9,6 +9,7 @@ import {
   Switch,
 } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
+import { Avatar } from "components/01-atoms/avatar/avatar";
 import { NavLinkButtons } from "components/02-molecules/main-nav/nav-link-buttons";
 import useWindowSize from "hooks/utils/use-window-size";
 import Link from "next/link";
@@ -26,8 +27,15 @@ export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
     <NavbarGroup className={Styles.mainNav__left}>
       <NavbarHeading className={Styles.mainNav__left__brand}>
         <Link href="/" passHref={true}>
-          <AnchorButton minimal={true} icon={IconNames.HOME}>
-            <span className={Styles.mainNav__left__brand__text}>
+          <AnchorButton
+            minimal={true}
+            className={Styles.mainNav__left__brand__container}
+          >
+            <Avatar
+              svg={true}
+              className={Styles.mainNav__left__brand__container__img}
+            />
+            <span className={Styles.mainNav__left__brand__container__text}>
               mjones.network
             </span>
           </AnchorButton>
