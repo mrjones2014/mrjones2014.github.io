@@ -20,9 +20,21 @@ const monthNames = [
   "November",
   "December",
 ];
+
+const formatTimeOfDay = (date) => {
+  let hours = date.getHours();
+  const minutes = date.getMinutes();
+  const amOrPm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours === 0 ? 12 : hours; // 0 should be 12 AM
+  return `${hours}:${minutes} ${amOrPm}`;
+};
+
 const formatCurrentDate = () => {
   const now = new Date(Date.now());
-  return `${monthNames[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+  return `${
+    monthNames[now.getMonth()]
+  } ${now.getDate()}, ${now.getFullYear()} at ${formatTimeOfDay(now)}`;
 };
 
 module.exports = withMDX({
