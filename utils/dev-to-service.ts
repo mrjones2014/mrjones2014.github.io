@@ -14,12 +14,18 @@ const fetchArticles = async (
 ): Promise<Array<DevToArticleMeta>> => {
   const query = Object.assign({}, DEFAULT_QUERY, { per_page: limit });
   const response = await superagent.get(ARTICLES_API).query(query);
+  if (!response.ok) {
+    throw response;
+  }
   return parseResponse<Array<DevToArticleMeta>>(response.body);
 };
 
 const getArticle = async (slug: string): Promise<DevToArticle> => {
   const endpoint = `${ARTICLES_API}/${DEV_TO_USERNAME}/${slug}`;
   const response = await superagent.get(endpoint);
+  if (!response.ok) {
+    throw response;
+  }
   return parseResponse<DevToArticle>(response.body);
 };
 
