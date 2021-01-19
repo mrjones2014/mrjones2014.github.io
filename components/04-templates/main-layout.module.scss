@@ -5,7 +5,6 @@
 .mainLayout {
   position: relative;
   height: vh(100);
-  padding-top: $pt-navbar-height;
 
   &__background {
     z-index: 1;
@@ -22,7 +21,6 @@
 
   &__content {
     z-index: 2;
-    // height: 100%;
     position: fixed;
     top: $pt-navbar-height;
     left: 0;
