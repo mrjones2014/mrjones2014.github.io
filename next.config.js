@@ -21,6 +21,14 @@ const monthNames = [
   "December",
 ];
 
+const getCurrentDateInEST = () => {
+  const offset = -5; // EST timezone offset -5
+  const dateInEST = new Date(new Date().getTime() + offset * 3600 * 1000)
+    .toUTCString()
+    .replace(/ GMT$/, "");
+  return new Date(dateInEST);
+};
+
 const formatTimeOfDay = (date) => {
   let hours = date.getHours();
   const minutes = date.getMinutes();
@@ -31,10 +39,11 @@ const formatTimeOfDay = (date) => {
 };
 
 const formatCurrentDate = () => {
-  const now = new Date(Date.now());
+  const now = getCurrentDateInEST();
+  console.log(now);
   return `${
     monthNames[now.getMonth()]
-  } ${now.getDate()}, ${now.getFullYear()} at ${formatTimeOfDay(now)}`;
+  } ${now.getDate()}, ${now.getFullYear()} at ${formatTimeOfDay(now)} EST`;
 };
 
 module.exports = withMDX({
