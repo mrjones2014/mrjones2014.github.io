@@ -3,17 +3,14 @@
 @import "~sass-mq";
 
 .blog {
-  @include code-background();
+  @include page-min-height();
   position: relative;
-  height: 100%;
 
   $post-card-margin: 16px;
 
   &__content {
     @include gutter-padding();
     position: relative;
-    height: 100%;
-    overflow-y: auto;
     padding-top: 16px;
     padding-bottom: 16px;
 

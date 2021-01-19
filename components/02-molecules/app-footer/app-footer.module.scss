@@ -1,0 +1,13 @@
+.appFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__content {
+    text-align: center;
+
+    p {
+      margin-bottom: 2px;
+    }
+  }
+}

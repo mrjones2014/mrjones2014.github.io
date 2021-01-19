@@ -1,6 +1,11 @@
 @import "sass/variables";
 @import "sass/breakpoints";
 @import "~sass-mq";
+@import "~@blueprintjs/core/lib/scss/variables";
+
+@mixin page-min-height() {
+  min-height: calc(100% - #{$pt-navbar-height});
+}
 
 @mixin gutter-padding($inner-width: $content-width) {
   padding-left: calc((100vw - #{$inner-width}) / 2);
@@ -9,24 +14,5 @@
   @include mq($from: zero, $until: tablet) {
     padding-left: 16px;
     padding-right: 16px;
-  }
-}
-
-@mixin code-background() {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/code.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: inset 0 0 0 3000px rgba(27, 27, 27, 0.3);
-    filter: blur(4px) contrast(1.15);
   }
 }

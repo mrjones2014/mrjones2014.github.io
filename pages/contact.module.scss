@@ -4,16 +4,12 @@
 @import "~sass-mq";
 
 .contactPage {
-  @include code-background();
-  position: relative;
-  height: 100%;
+  @include page-min-height();
 
   &__content {
     @include gutter-padding();
     position: relative;
     padding-top: 32px;
-    height: 100%;
-    overflow-y: auto;
 
     &__card {
       margin-bottom: 32px;

@@ -1,9 +1,35 @@
 @import "~@blueprintjs/core/lib/scss/variables";
 @import "sass/functions";
+@import "sass/mixins";
 
 .mainLayout {
+  position: relative;
   height: vh(100);
   padding-top: $pt-navbar-height;
+
+  &__background {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/code_blurred.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  &__content {
+    z-index: 2;
+    // height: 100%;
+    position: fixed;
+    top: $pt-navbar-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
 
   &.dark {
     background-color: $pt-dark-app-background-color;

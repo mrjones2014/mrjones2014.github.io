@@ -4,11 +4,9 @@
 @import "~sass-mq";
 
 .indexPage {
+  @include page-min-height();
   padding: 16px;
-  height: 100%;
   position: relative;
-
-  @include code-background();
 
   &__content {
     position: relative;

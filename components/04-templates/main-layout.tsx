@@ -3,8 +3,9 @@ import { MainNav } from "components/02-molecules/main-nav/main-nav";
 import useSafariVhWorkaround from "hooks/utils/use-safari-vh-workaround";
 import { ChildrenProps } from "interfaces/children-props";
 import React, { useEffect, useState } from "react";
-import Head from "next/head";
 import Styles from "./main-layout.module.scss";
+import { AppFooter } from "components/02-molecules/app-footer/app-footer";
+import { HeadMeta } from "components/04-templates/head";
 
 export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
   useSafariVhWorkaround();
@@ -26,28 +27,14 @@ export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
 
   return (
     <React.Fragment>
-      <Head>
-        <title>mjones.network</title>
-        <link
-          rel="shortcut icon"
-          href="https://mjones.network/avatar_svg.png"
-        />
-        <link rel="icon" href="https://mjones.network/avatar_svg.png" />
-        <meta property="og:title" content="mjones.network" data-rh="true" />
-        <meta
-          property="og:description"
-          content="I'm a full-stack software engineer, passionate about online privacy, accessibility, and dark themes. 😎"
-          data-rh="true"
-        />
-        <meta
-          property="og:image"
-          content="https://mjones.network/avatar.png"
-          data-rh="true"
-        />
-      </Head>
+      <HeadMeta />
       <div className={classNames.join(" ")}>
         <MainNav useDarkTheme={useDarkTheme} onThemeToggled={toggleDarkTheme} />
-        {props.children}
+        <div className={Styles.mainLayout__background} />
+        <div className={Styles.mainLayout__content}>
+          {props.children}
+          <AppFooter />
+        </div>
       </div>
     </React.Fragment>
   );

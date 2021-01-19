@@ -4,19 +4,15 @@
 @import "~@blueprintjs/core/lib/scss/variables";
 
 .aboutPage {
-  @include code-background();
-  height: 100%;
+  @include page-min-height();
   position: relative;
 
   &__content {
     position: relative;
-    height: 100%;
 
     &__bio {
       @include gutter-padding();
-      height: 100%;
-      overflow-y: auto;
-      padding: 128px;
+      padding-top: 128px;
 
       @include mq($from: zero, $until: tablet) {
         padding-top: 16px;
