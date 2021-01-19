@@ -1,16 +1,12 @@
-import { Card, Classes, Divider, H1, Spinner, Tag } from "@blueprintjs/core";
+import { Card, Classes, Divider, H1 } from "@blueprintjs/core";
 import { BlogPostMetaTags } from "components/03-organisms/blog-post/blog-post-meta-tags";
-import useDevToArticle from "hooks/service/use-dev-to-article";
 import DevToArticle from "interfaces/dev-to-article";
 import DevToArticleMeta from "interfaces/dev-to-article-meta";
 import {
-  GetStaticPaths,
   GetStaticPathsResult,
   GetStaticPropsContext,
   GetStaticPropsResult,
 } from "next";
-import { useRouter } from "next/router";
-import { ParsedUrlQuery } from "querystring";
 import React from "react";
 import { DevToService } from "utils/dev-to-service";
 import Styles from "./[slug].module.scss";
