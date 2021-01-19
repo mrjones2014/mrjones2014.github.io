@@ -20,7 +20,18 @@ code {
   font-size: 16px;
   padding: 0.1em 0.25em;
   font-family: "monospace";
+  overflow: auto;
 }
+
+// override formatting from blueprint.js
+.bp3-running-text {
+  pre {
+    word-break: initial;
+    word-wrap: initial;
+    background-color: rgba(16, 22, 26, 0.3);
+  }
+}
+
 .highlight .hll {
   background-color: #49483e;
 }
@@ -28,6 +39,7 @@ code {
   border-radius: $border-radius;
   background: $syntax-background-color;
   color: $syntax-text-color;
+  overflow-wrap: initial;
 }
 .highlight .c {
   color: $syntax-comment-color;
