@@ -14,6 +14,7 @@ export const NavLinkButtons: React.FC = () => {
         link.external !== true ? (
           <Link href={link.href} passHref={true} key={link.href}>
             <AnchorButton
+              aria-label={link.text}
               className={Styles.navLinkButtons__button}
               active={router.route.startsWith(link.href)}
               minimal={true}

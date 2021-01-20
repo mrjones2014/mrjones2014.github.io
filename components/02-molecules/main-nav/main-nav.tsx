@@ -1,20 +1,16 @@
 import {
   Alignment,
   AnchorButton,
-  Icon,
   Navbar,
   NavbarDivider,
   NavbarGroup,
   NavbarHeading,
   Switch,
 } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
-import { Avatar } from "components/01-atoms/avatar/avatar";
 import { NavLinkButtons } from "components/02-molecules/main-nav/nav-link-buttons";
-import useWindowSize from "hooks/utils/use-window-size";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
-import { BreakPoints } from "utils/breakpoints";
 import Styles from "./main-nav.module.scss";
 
 export interface MainNavProps {
@@ -27,17 +23,13 @@ export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
     <NavbarGroup className={Styles.mainNav__left}>
       <NavbarHeading className={Styles.mainNav__left__brand}>
         <Link href="/" passHref={true}>
-          <AnchorButton
-            minimal={true}
-            className={Styles.mainNav__left__brand__container}
-          >
-            <Avatar
-              svg={true}
-              className={Styles.mainNav__left__brand__container__img}
-            />
-            <span className={Styles.mainNav__left__brand__container__text}>
-              mjones.network
-            </span>
+          <AnchorButton aria-label="Home" minimal={true}>
+            <div className={Styles.mainNav__left__brand__container}>
+              <Image src="/avatar.svg" alt="Home" width="32px" height="32px" />
+              <span className={Styles.mainNav__left__brand__container__text}>
+                mjones.network
+              </span>
+            </div>
           </AnchorButton>
         </Link>
       </NavbarHeading>

@@ -3,6 +3,7 @@ import { IconNames } from "@blueprintjs/icons";
 import { BlogPostMetaTags } from "components/03-organisms/blog-post/blog-post-meta-tags";
 import DevToArticleMeta from "interfaces/dev-to-article-meta";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import Styles from "./blog-post-card.module.scss";
 
@@ -21,7 +22,12 @@ export const BlogPostCard: React.FC<BlogPostCardProps> = (
       <a className={`${Styles.blogPostCard} -inherit-color ${className ?? ""}`}>
         <Card className={Styles.blogPostCard__card} tabIndex={0}>
           <div className={Styles.blogPostCard__card__image}>
-            <img src={article.cover_image} alt={article.description} />
+            <Image
+              src={article.cover_image}
+              alt={article.description}
+              width="100%"
+              height="auto"
+            />
           </div>
           <div className={Styles.blogPostCard__card__info}>
             <div className={Styles.blogPostCard__card__info__title}>

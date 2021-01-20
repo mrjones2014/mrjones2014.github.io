@@ -49,9 +49,18 @@ const formatCurrentDate = () => {
   } ${now.getDate()}, ${now.getFullYear()} at ${formatTimeOfDay(now)} EST`;
 };
 
-module.exports = withMDX({
+const Config = {
   distDir: "dist",
   env: {
     NEXT_PUBLIC_LAST_UPDATED_DATE: formatCurrentDate(),
   },
-});
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
+};
+
+module.exports = withMDX(Config);
