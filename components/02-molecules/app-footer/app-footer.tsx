@@ -13,7 +13,7 @@ export const AppFooter: React.FC = () => {
           LLC.
         </p>
         {lastUpdatedText != null && lastUpdatedText.length > 0 && (
-          <p>Content last updated: {lastUpdatedText}</p>
+          <p>Last build: {lastUpdatedText}</p>
         )}
       </div>
     </Navbar>
