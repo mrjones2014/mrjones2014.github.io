@@ -31,7 +31,10 @@ const getCurrentDateInEST = () => {
 
 const formatTimeOfDay = (date) => {
   let hours = date.getHours();
-  const minutes = date.getMinutes();
+  let minutes = `${date.getMinutes()}`;
+  if (minutes.length < 2) {
+    minutes = `0${minutes}`;
+  }
   const amOrPm = hours >= 12 ? "PM" : "AM";
   hours = hours % 12;
   hours = hours === 0 ? 12 : hours; // 0 should be 12 AM
