@@ -100,10 +100,14 @@ export const ContactForm: React.FC = () => {
         type="hidden"
         name="_subject"
         value={subjectLine}
-        style={{ display: "none" }}
+        className={Styles.contactForm__hidden}
       />
       {/* Anti-spam measure, see: https://help.formspree.io/hc/en-us/articles/360013580813-Honeypot-spam-filtering */}
-      <input type="hidden" name="_gotcha" style={{ display: "none" }} />
+      <input
+        type="hidden"
+        name="_gotcha"
+        className={Styles.contactForm__hidden}
+      />
       <FormGroup>
         <Button type="submit">Submit</Button>
       </FormGroup>

@@ -1,4 +1,4 @@
-import { Card, H1, H4, Menu, Popover } from "@blueprintjs/core";
+import { Card, H1, H4, H6, Menu, Popover } from "@blueprintjs/core";
 import { ContactForm } from "components/03-organisms/contact-form/contact-form";
 import { SocialLinkMenuItems } from "components/03-organisms/social-links/social-link-menu";
 import React from "react";
@@ -21,6 +21,7 @@ const ContactPage: React.FC = () => (
           <H4 className={Styles.contactPage__content__card__aroundTheWeb}>
             Or, find me {menuTrigger}.
           </H4>
+          <H6>(Please, no marketing emails!)</H6>
         </div>
         <ContactForm />
       </Card>
