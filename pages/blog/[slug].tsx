@@ -7,7 +7,6 @@ import {
   GetStaticPropsContext,
   GetStaticPropsResult,
 } from "next";
-import Image from "next/image";
 import React from "react";
 import { DevToService } from "utils/dev-to-service";
 import Styles from "./[slug].module.scss";
@@ -23,7 +22,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
     <div className={Styles.blogPost__content}>
       <Card className={Styles.blogPost__content__card}>
         <div className={Styles.blogPost__content__card__image}>
-          <Image
+          <img
             src={article.cover_image}
             alt={article.description}
             width="100%"

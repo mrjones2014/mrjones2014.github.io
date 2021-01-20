@@ -5,7 +5,6 @@ import { ChildrenProps } from "interfaces/children-props";
 import React, { useEffect, useRef, useState } from "react";
 import Styles from "./main-layout.module.scss";
 import { AppFooter } from "components/02-molecules/app-footer/app-footer";
-import { HeadMeta } from "components/04-templates/head";
 import { useRouter } from "next/router";
 
 export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
@@ -40,7 +39,6 @@ export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
 
   return (
     <React.Fragment>
-      <HeadMeta />
       <div className={classNames.join(" ")}>
         <MainNav useDarkTheme={useDarkTheme} onThemeToggled={toggleDarkTheme} />
         <div className={Styles.mainLayout__background} />
