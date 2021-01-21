@@ -3,35 +3,16 @@
 @import "~sass-mq";
 
 .blog {
-  @include page-min-height();
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 
-  $post-card-margin: 16px;
+  &__post {
+    $post-card-margin: 16px;
+    margin: $post-card-margin;
+    max-width: calc(50% - #{$post-card-margin * 2});
 
-  &__content {
-    @include gutter-padding();
-    position: relative;
-    padding-top: 16px;
-    padding-bottom: 16px;
-
-    &__spinner {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &__posts {
-      padding-bottom: 48px;
-      display: flex;
-      flex-wrap: wrap;
-
-      &__post {
-        margin: $post-card-margin;
-        max-width: calc(50% - #{$post-card-margin * 2});
-
-        @include mq($from: zero, $until: tablet) {
-          max-width: 100%;
-        }
-      }
+    @include mq($from: zero, $until: tablet) {
+      max-width: 100%;
     }
   }
 }

@@ -14,7 +14,9 @@ export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
       <div className={`${Styles.mainLayout} ${darkTheme ? Classes.DARK : ""}`}>
         <MainNav useDarkTheme={darkTheme} onThemeToggled={toggleDarkTheme} />
         <div className={Styles.mainLayout__content} ref={contentRef}>
-          {props.children}
+          <div className={Styles.mainLayout__content__inner}>
+            {props.children}
+          </div>
           <AppFooter />
         </div>
       </div>

@@ -4,7 +4,7 @@
 .contactForm {
   textarea {
     resize: vertical;
-    min-height: 300px;
+    min-height: 275px;
     width: 100%;
 
     @include mq($from: zero, $until: tablet) {

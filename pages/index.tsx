@@ -5,16 +5,12 @@ import Styles from "./index.module.scss";
 
 const IndexPage: React.FC = () => (
   <div className={Styles.indexPage}>
-    <div className={Styles.indexPage__content}>
-      <div className={Styles.indexPage__avatar}>
-        <SvgAvatar />
-      </div>
-      <FrontpageBlurb />
-      <div className={Styles.indexPage__content__socialLinks}>
-        <SocialLinkButtons
-          className={Styles.indexPage__content__socialLinks__link}
-        />
-      </div>
+    <div className={Styles.indexPage__avatar}>
+      <SvgAvatar />
+    </div>
+    <FrontpageBlurb />
+    <div className={Styles.indexPage__socialLinks}>
+      <SocialLinkButtons className={Styles.indexPage__socialLinks__link} />
     </div>
   </div>
 );

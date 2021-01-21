@@ -4,48 +4,39 @@
 @import "~sass-mq";
 
 .indexPage {
-  @include page-min-height();
-  padding: 16px;
-  position: relative;
+  text-align: center;
 
-  &__content {
-    position: relative;
-    padding-top: vh(10);
-    @include gutter-padding(850px);
-    text-align: center;
+  h1 {
+    font-size: 5em;
+  }
 
+  h1,
+  h2 {
+    color: white;
+  }
+
+  @include mq($from: zero, $until: tablet) {
+    padding-top: 16px;
     h1 {
-      font-size: 5em;
+      font-size: 2em;
     }
 
-    h1,
     h2 {
-      color: white;
+      font-size: 1.25em;
+    }
+  }
+
+  &__socialLinks {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @include mq($from: tablet) {
+      margin-top: 48px;
     }
 
-    @include mq($from: zero, $until: tablet) {
-      padding-top: 16px;
-      h1 {
-        font-size: 2em;
-      }
-
-      h2 {
-        font-size: 1.25em;
-      }
-    }
-
-    &__socialLinks {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-
-      @include mq($from: tablet) {
-        margin-top: 48px;
-      }
-
-      &__link {
-        margin-bottom: 16px;
-      }
+    &__link {
+      margin-bottom: 16px;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Button, Menu, MenuItem, Popover, Position } from "@blueprintjs/core";
+import { Button, Menu, MenuItem, Popover } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 import { SocialLink, SocialLinks } from "data/social-links";
 import React from "react";

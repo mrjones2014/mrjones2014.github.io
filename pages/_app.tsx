@@ -1,6 +1,6 @@
 import React from "react";
 import NextApp from "next/app";
-import { MainLayout } from "components/04-templates/main-layout";
+import { MainLayout } from "components/04-templates/main-layout/main-layout";
 import Head from "next/head";
 import "./_app.scss";
 

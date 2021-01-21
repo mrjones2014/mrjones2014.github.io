@@ -12,21 +12,17 @@ const menuTrigger = (
 );
 
 const ContactPage: React.FC = () => (
-  <div className={Styles.contactPage}>
-    <div className={Styles.contactPage__content}>
-      <Card className={Styles.contactPage__content__card}>
-        <div className={Styles.contactPage__content__card__header}>
-          <H1>Contact Me</H1>
-          <H4>Want to hire me or inquire about some work? Contact me here.</H4>
-          <H4 className={Styles.contactPage__content__card__aroundTheWeb}>
-            Or, find me {menuTrigger}.
-          </H4>
-          <H6>(Please, no marketing emails!)</H6>
-        </div>
-        <ContactForm />
-      </Card>
+  <Card className={Styles.contactPage}>
+    <div className={Styles.contactPage__header}>
+      <H1>Contact Me</H1>
+      <H4>Want to hire me or inquire about some work? Contact me here.</H4>
+      <H4 className={Styles.contactPage__aroundTheWeb}>
+        Or, find me {menuTrigger}.
+      </H4>
+      <H6>(Please, no marketing emails!)</H6>
     </div>
-  </div>
+    <ContactForm />
+  </Card>
 );
 
 export default ContactPage;

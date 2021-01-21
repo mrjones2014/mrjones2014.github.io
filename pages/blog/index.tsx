@@ -11,17 +11,13 @@ interface BlogPageProps {
 
 const BlogPage: React.FC<BlogPageProps> = ({ articles }: BlogPageProps) => (
   <div className={Styles.blog}>
-    <div className={Styles.blog__content}>
-      <div className={Styles.blog__content__posts}>
-        {articles.map((article: DevToArticleMeta) => (
-          <BlogPostCard
-            article={article}
-            key={article.id}
-            className={Styles.blog__content__posts__post}
-          />
-        ))}
-      </div>
-    </div>
+    {articles.map((article: DevToArticleMeta) => (
+      <BlogPostCard
+        article={article}
+        key={article.id}
+        className={Styles.blog__post}
+      />
+    ))}
   </div>
 );
 

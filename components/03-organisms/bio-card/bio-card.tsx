@@ -1,4 +1,4 @@
-import { Callout, Card, Classes, Intent } from "@blueprintjs/core";
+import { Card, Classes } from "@blueprintjs/core";
 import { Avatar } from "components/01-atoms/avatar/avatar";
 import { ClassNameProps } from "interfaces/class-name-props";
 import React from "react";

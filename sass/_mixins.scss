@@ -3,10 +3,6 @@
 @import "~sass-mq";
 @import "~@blueprintjs/core/lib/scss/variables";
 
-@mixin page-min-height() {
-  min-height: calc(100% - #{$pt-navbar-height});
-}
-
 @mixin gutter-padding($inner-width: $content-width) {
   padding-left: calc((100vw - #{$inner-width}) / 2);
   padding-right: calc((100vw - #{$inner-width}) / 2);
