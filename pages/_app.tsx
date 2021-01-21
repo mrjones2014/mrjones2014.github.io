@@ -1,8 +1,8 @@
 import React from "react";
 import NextApp from "next/app";
 import { MainLayout } from "components/04-templates/main-layout";
+import Head from "next/head";
 import "./_app.scss";
-import { Head } from "next/document";
 
 export default class App extends NextApp {
   public render(): JSX.Element {

@@ -5,31 +5,11 @@
 .mainLayout {
   position: relative;
   height: vh(100);
-
-  &__background {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("/code_blurred.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
+  padding-top: $pt-navbar-height;
 
   &__content {
-    z-index: 2;
-    position: fixed;
-    top: $pt-navbar-height;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    background-image: url("/code_blurred.jpg");
+    height: 100%;
     overflow-y: auto;
-  }
-
-  &.dark {
-    background-color: $pt-dark-app-background-color;
   }
 }
