@@ -7,6 +7,19 @@ import Styles from "./main-layout.module.scss";
 import { AppFooter } from "components/02-molecules/app-footer/app-footer";
 import { useRouter } from "next/router";
 
+/**
+ * Detect the system preference for dark mode,
+ * and use that as the default value for whether
+ * we should use dark mode.
+ */
+const systemPrefersDarkMode = (): boolean => {
+  try {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  } catch (ignored) {
+    return true;
+  }
+};
+
 export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
   const router = useRouter();
 
@@ -18,15 +31,18 @@ export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
     FocusStyleManager.onlyShowFocusOnTabs();
   }, []);
 
-  useEffect(() => {
-    if (contentRef.current == null) {
-      return;
-    }
+  // useEffect(() => {
+  //   if (contentRef.current == null) {
+  //     return;
+  //   }
 
-    contentRef.current.scrollTop = 0;
-  }, [router.pathname]);
+  //   contentRef.current.scrollTop = 0;
+  // }, [router.pathname]);
 
   const [useDarkTheme, setUseDarkTheme] = useState(true);
+
+  // detect user preference on mount
+  useEffect(() => setUseDarkTheme(systemPrefersDarkMode()), []);
 
   const toggleDarkTheme = () =>
     setUseDarkTheme((prevState: boolean) => !prevState);
