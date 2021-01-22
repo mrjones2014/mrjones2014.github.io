@@ -12,7 +12,6 @@ export async function getStaticProps(): Promise<
   GetStaticPropsResult<BlogPostPageProps>
 > {
   const articles = await DevToService.fetchArticles();
-  console.log(articles);
   const slug = articles.find(
     (article: DevToArticle) =>
       article.title === "How I Built My Personal Website",
