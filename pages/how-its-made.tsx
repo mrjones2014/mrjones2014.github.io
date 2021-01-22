@@ -11,17 +11,9 @@ const HowItsMadePage: React.FC<BlogPostPageProps> = (
 export async function getStaticProps(): Promise<
   GetStaticPropsResult<BlogPostPageProps>
 > {
-  const articles = await DevToService.fetchArticles();
-  const slug = articles.find(
-    (article: DevToArticle) =>
-      article.title === "How I Built My Personal Website",
-  )?.slug;
-
-  if (slug == null) {
-    throw Error("Could not find article for how it's made page.");
-  }
-
-  const article = await DevToService.getArticle(slug);
+  const article = await DevToService.getArticle(
+    "how-i-built-my-personal-website-3k0n",
+  );
   if (article == null) {
     throw Error("Could not retrieve article for how it's made page.");
   }
