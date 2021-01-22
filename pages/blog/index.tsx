@@ -5,7 +5,7 @@ import React from "react";
 import { DevToService } from "utils/dev-to-service";
 import Styles from "./index.module.scss";
 
-interface BlogPageProps {
+export interface BlogPageProps {
   articles: Array<DevToArticleMeta>;
 }
 

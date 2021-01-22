@@ -17,4 +17,8 @@ export const NavLinks: Array<NavLink> = [
     href: "/contact",
     text: "Contact Me",
   },
+  {
+    href: "/how-its-made",
+    text: "How It's Made",
+  },
 ];

@@ -11,7 +11,7 @@ import React from "react";
 import { DevToService } from "utils/dev-to-service";
 import Styles from "./[slug].module.scss";
 
-interface BlogPostPageProps {
+export interface BlogPostPageProps {
   article: DevToArticle;
 }
 
