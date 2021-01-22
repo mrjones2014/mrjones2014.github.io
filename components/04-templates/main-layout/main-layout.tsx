@@ -12,7 +12,7 @@ export const MainLayout: React.FC<ChildrenProps> = (props: ChildrenProps) => {
   return (
     <React.Fragment>
       <div className={`${Styles.mainLayout} ${darkTheme ? Classes.DARK : ""}`}>
-        <MainNav useDarkTheme={darkTheme} onThemeToggled={toggleDarkTheme} />
+        <MainNav darkTheme={darkTheme} onThemeToggled={toggleDarkTheme} />
         <div className={Styles.mainLayout__content} ref={contentRef}>
           <div className={Styles.mainLayout__content__inner}>
             {props.children}

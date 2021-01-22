@@ -8,12 +8,13 @@ import {
   Switch,
 } from "@blueprintjs/core";
 import { NavLinkButtons } from "components/02-molecules/main-nav/nav-link-buttons";
+import { NavLinkMenu } from "components/02-molecules/main-nav/nav-link-menu";
 import Link from "next/link";
 import React from "react";
 import Styles from "./main-nav.module.scss";
 
 export interface MainNavProps {
-  useDarkTheme: boolean;
+  darkTheme: boolean;
   onThemeToggled: () => void;
 }
 
@@ -34,7 +35,12 @@ export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
       </NavbarHeading>
       <NavbarDivider />
       <div className={Styles.mainNav__left__navLinks}>
-        <NavLinkButtons />
+        <NavLinkButtons className={Styles.mainNav__left__navLinks__links} />
+        <NavLinkMenu
+          className={Styles.mainNav__left__navLinks__menu}
+          darkTheme={props.darkTheme}
+          onThemeToggled={props.onThemeToggled}
+        />
       </div>
     </NavbarGroup>
     <NavbarGroup align={Alignment.RIGHT}>
@@ -44,7 +50,7 @@ export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
         label="Theme"
         innerLabel="Light"
         innerLabelChecked="Dark"
-        checked={props.useDarkTheme}
+        checked={props.darkTheme}
         onChange={props.onThemeToggled}
       />
     </NavbarGroup>
