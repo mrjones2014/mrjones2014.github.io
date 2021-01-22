@@ -18,8 +18,8 @@
     &__inner {
       min-height: calc(100% - #{$pt-navbar-height});
       @include gutter-padding();
-      padding-top: 80px;
-      padding-bottom: 80px;
+      padding-top: 32px;
+      padding-bottom: 64px;
 
       @include mq($from: zero, $until: tablet) {
         padding-top: 16px;
