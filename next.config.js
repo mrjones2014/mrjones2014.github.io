@@ -6,6 +6,21 @@ const withMDX = require("@next/mdx")({
   },
 });
 
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 const getCurrentDateInEST = () => {
   const offset = -5; // EST timezone offset -5
   const dateInEST = new Date(new Date().getTime() + offset * 3600 * 1000)
@@ -30,11 +45,8 @@ const formatCurrentDate = () => {
   const now = getCurrentDateInEST();
   console.log(now);
   return `${
-    now.getMonth() + 1
-  }/${now.getDate()}/${now
-    .getFullYear()
-    .toString()
-    .substr(-2)} ${formatTimeOfDay(now)} EST`;
+    monthNames[now.getMonth()]
+  } ${now.getDate()}, ${now.getFullYear()} at ${formatTimeOfDay(now)} EST`;
 };
 
 const Config = {
