@@ -132,3 +132,12 @@
     }
   }
 }
+
+.bp3-dark {
+  .blog-post-markdown {
+    .ltag-github-readme-tag,
+    .ltag__link {
+      box-shadow: 1px 2px 4px 0 rgba(255, 255, 255, 0.3);
+    }
+  }
+}
