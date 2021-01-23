@@ -1,0 +1,134 @@
+@import "sass/mixins";
+
+.blog-post-markdown {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  figcaption {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    > code {
+      line-break: anywhere;
+    }
+  }
+
+  iframe {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 0;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  .ltag-github-readme-tag {
+    @include markdown-widget-margin();
+    max-width: 620px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+
+    .readme-overview {
+      padding: 0.8em 0.5em;
+      border-bottom: 1px solid #dbdbdb;
+
+      > h2 {
+        font-weight: 400;
+        font-size: 1.5em;
+        line-height: 1.3em;
+        margin: 0em 0px 0.5em;
+
+        > img {
+          width: 1.15em !important;
+          max-width: 1.1em !important;
+          display: inline-block;
+          left: 0px;
+          margin-right: 0.3em;
+          vertical-align: -0.18em;
+          filter: invert(100%);
+        }
+      }
+
+      > h3 {
+        font-weight: 400;
+        margin: 0;
+        margin-left: 0.15em;
+        font-size: 1em;
+        line-height: 1.05em;
+      }
+    }
+  }
+
+  .ltag {
+    &__link {
+      @include markdown-widget-margin();
+      max-width: 620px;
+      font-family: var(--ff-sans-serif);
+      border: 1px solid #dbdbdb;
+      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.18);
+      border-radius: 3px;
+      display: block;
+      display: flex;
+
+      &__link {
+        box-sizing: border-box;
+
+        &:first-child {
+          margin-right: 32px;
+        }
+      }
+
+      &__pic {
+        display: inline-block;
+        padding: calc(0.4vw + 8px) calc(0.8vw + 8px);
+        padding-right: calc(8px + 0.8vw);
+        padding-right: 8px;
+      }
+
+      &__content {
+        display: inline-block;
+        vertical-align: top;
+        padding: calc(0.5vw + 6px);
+        padding-left: calc(6px + 0.5vw);
+        padding-left: 0;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-weight: 500;
+          font-size: 1.5em;
+        }
+
+        h3 {
+          margin: 0.1vw 0;
+          padding: 0;
+          font-size: 1em;
+          font-weight: bold;
+        }
+      }
+
+      &__taglist {
+        margin-top: 8px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+
+      &__tag {
+        margin-right: calc(0.4vw + 4px);
+        margin-left: 1px;
+      }
+    }
+  }
+}

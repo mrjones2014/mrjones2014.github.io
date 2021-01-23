@@ -39,7 +39,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
     </div>
     <div className={Styles.blogPost__body}>
       <div
-        className={Classes.RUNNING_TEXT}
+        className={`${Classes.RUNNING_TEXT} blog-post-markdown`}
         dangerouslySetInnerHTML={{
           __html: article.body_html,
         }}

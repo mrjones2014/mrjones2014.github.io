@@ -12,3 +12,10 @@
     padding-right: 16px;
   }
 }
+
+@mixin markdown-widget-margin() {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
