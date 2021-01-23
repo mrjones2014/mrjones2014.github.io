@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
         working-directory: .
-    container: "Dockerfile"
+    container: mjones44/mrjones2014.github.io-ci:latest
     steps:
       - run: git --version
       - name: Checkout 🛎️
