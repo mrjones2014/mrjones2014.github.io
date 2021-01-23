@@ -1,8 +1,11 @@
 @import "sass/breakpoints";
+@import "~@blueprintjs/core/lib/scss/variables";
 @import "~sass-mq";
 
 .mainNav {
   width: 100%;
+
+  $nav-btn-height: $pt-navbar-height;
 
   &__left {
     white-space: nowrap;
@@ -17,9 +20,18 @@
       white-space: nowrap;
       margin-right: 0 !important;
 
+      > a {
+        height: $nav-btn-height;
+      }
+
       &__container {
         display: flex;
         align-items: center;
+
+        img {
+          height: 32px;
+          width: auto;
+        }
 
         > svg {
           margin-top: -2px;
@@ -47,6 +59,12 @@
 
       &__links {
         display: initial;
+        height: $nav-btn-height;
+        > span {
+          height: $nav-btn-height;
+          display: inline-flex;
+          align-items: center;
+        }
 
         @include mq($from: zero, $until: phablet) {
           display: none !important;

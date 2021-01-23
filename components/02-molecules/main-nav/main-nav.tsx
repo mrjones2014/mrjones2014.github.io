@@ -10,8 +10,8 @@ import {
 import { NavLinkButtons } from "components/02-molecules/main-nav/nav-link-buttons";
 import { NavLinkMenu } from "components/02-molecules/main-nav/nav-link-menu";
 import Link from "next/link";
-import SvgAvatar from "public/avatar.svg";
 import React from "react";
+import AvatarSvgDataUri from "utils/avatar-png-data-uri";
 import Styles from "./main-nav.module.scss";
 
 export interface MainNavProps {
@@ -26,7 +26,11 @@ export const MainNav: React.FC<MainNavProps> = (props: MainNavProps) => (
         <Link href="/" passHref={true}>
           <AnchorButton aria-label="Home" minimal={true}>
             <div className={Styles.mainNav__left__brand__container}>
-              <SvgAvatar width="32" height="32" viewBox="0 0 264 280" />
+              <img
+                src={AvatarSvgDataUri}
+                className={Styles.mainNav__left__brand__container__img}
+                alt={"Logo"}
+              />
               <span className={Styles.mainNav__left__brand__container__text}>
                 mjones.network
               </span>
