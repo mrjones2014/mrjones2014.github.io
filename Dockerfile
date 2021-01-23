@@ -21,3 +21,7 @@ RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | 
     && nvm install 14.15.3 \
     && nvm use 14.15.3 default \
     && npm i -g yarn
+
+COPY build.sh /build.sh
+
+ENTRYPOINT [ "/build.sh" ]
