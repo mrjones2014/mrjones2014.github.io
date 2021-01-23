@@ -23,5 +23,6 @@ RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | 
     && npm i -g yarn
 
 COPY build.sh /build.sh
+RUN ["chmod", "+x", "/build.sh"]
 
 ENTRYPOINT [ "/build.sh" ]
