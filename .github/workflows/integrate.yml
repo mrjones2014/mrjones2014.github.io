@@ -13,7 +13,7 @@ jobs:
     container: node:latest
     steps:
       - run: apt update
-      - run: apt upgrade git
+      - run: apt upgrade git -y
       - name: Checkout 🛎️
         uses: actions/checkout@v2
         with:
