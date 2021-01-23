@@ -12,7 +12,6 @@ jobs:
         working-directory: .
     container: mjones44/mrjones2014.github.io-ci:latest
     steps:
-      - run: git --version
       - name: Checkout 🛎️
         uses: actions/checkout@v2
         with:
@@ -22,6 +21,7 @@ jobs:
         with:
           path: ${{ github.workspace }}/.next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+      - run: nvm use 14.15.3
       - run: yarn install
       - run: yarn build
         env:
