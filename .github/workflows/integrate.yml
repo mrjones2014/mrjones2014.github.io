@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
         working-directory: .
-    container: node:latest
+    container: "Dockerfile"
     steps:
       - run: git --version
       - name: Checkout 🛎️
